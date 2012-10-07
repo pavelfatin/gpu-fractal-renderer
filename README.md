@@ -11,6 +11,6 @@ Features:
 
 Screenshot:
 
-![Fractal application screenshot](https://raw.github.com/pavelfatin/fractal/tree/master/images/fractal.png)
+![Fractal application screenshot](https://raw.github.com/pavelfatin/fractal/master/images/fractal.png)
 
 Pavel Fatin, [http://pavelfatin.com](http://pavelfatin.com/)
