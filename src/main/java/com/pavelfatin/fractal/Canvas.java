@@ -21,12 +21,11 @@ import com.pavelfatin.fractal.picture.Picture;
 import com.pavelfatin.fractal.picture.PictureListener;
 import com.pavelfatin.fractal.picture.Update;
 
-import javax.swing.*;
 import java.awt.*;
 import java.util.Collection;
 import java.util.LinkedList;
 
-class Canvas extends JComponent {
+class Canvas extends BufferedComponent {
     private final Collection<Update> myUpdates = new LinkedList<Update>();
     private final Picture myPicture;
 
@@ -45,9 +44,9 @@ class Canvas extends JComponent {
     }
 
     @Override
-    protected void paintComponent(final Graphics g) {
-        if (myUpdates.isEmpty()) {
-            final Update update = myPicture.update(g.getClipBounds());
+    protected void paintComponent(final Graphics g, final Rectangle r, final boolean complete) {
+        if (myUpdates.isEmpty() || complete) {
+            final Update update = myPicture.update(r);
             update.apply(g);
         } else {
             for (final Update update : myUpdates) {

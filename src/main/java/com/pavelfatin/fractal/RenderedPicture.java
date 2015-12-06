@@ -151,6 +151,7 @@ class RenderedPicture extends AbstractPicture {
 
         @Override
         public void onResize(final Dimension oldSize, final Dimension newSize) {
+            onChange();
         }
     }
 }

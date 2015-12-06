@@ -5,7 +5,7 @@
     <groupId>com.pavelfatin</groupId>
     <artifactId>fractal</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <name>Fractal</name>
     <url>https://github.com/pavelfatin/fractal</url>
 
@@ -30,6 +30,14 @@
 
     <build>
         <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.3.2</version>
